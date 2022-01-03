@@ -35,17 +35,21 @@ export default {
             text: '',
             textFirst: '',
             textSecond: '',
+            preText: '',
         }
     },
     methods: {
         onFirstInput(ei) {
             this.textFirst = ei;
-            this.text = this.textFirst + this.textSecond;
+            this.preText = this.textFirst + this.textSecond;
+            this.text = this.preText.toUpperCase();
         },
         onSecondInput(ei) {
             this.textSecond = ei;
-            this.text = this.textFirst + this.textSecond;
+            this.preText = this.textFirst + this.textSecond;
+            this.text = this.preText.toUpperCase();
         }
+
 
 
     }
@@ -74,9 +78,6 @@ input {
     border: hotpink 1px solid;
     padding: 5px 10px;
     margin: 20px;
-}
-#eventBasedApp span {
-    text-transform: uppercase;
 }
 
 </style>
